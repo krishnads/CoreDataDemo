@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15A284" minimumToolsVersion="Automatic">
+    <entity name="EmployeeDetails" syncable="YES">
+        <attribute name="eid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="post" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="salinfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SalaryDetails" inverseName="empinfo" inverseEntity="SalaryDetails" syncable="YES"/>
+    </entity>
+    <entity name="SalaryDetails" syncable="YES">
+        <attribute name="eid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="empinfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmployeeDetails" inverseName="salinfo" inverseEntity="EmployeeDetails" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EmployeeDetails" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="SalaryDetails" positionX="-45" positionY="18" width="128" height="90"/>
+    </elements>
+</model>
